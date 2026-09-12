@@ -1,9 +1,0 @@
-.venv/
-**/.venv/
-**/venv/
-**/__pycache__/
-*.py[cod]
-frontend/node_modules/
-backend/models/*.joblib
-backend/models/*_features.json
-backend/ml_pipeline/**/*.csv
