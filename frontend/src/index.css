@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-color: #071014;
+    background-image: linear-gradient(rgba(43, 69, 70, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(43, 69, 70, 0.18) 1px, transparent 1px),
+      radial-gradient(circle at 80% 0%, rgba(10, 170, 150, 0.12), transparent 34rem);
+    background-size: 28px 28px, 28px 28px, auto;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Base styling */
+body {
+  background: #071014;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #dbe7e5;
+}
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px currentColor); }
+  50% { opacity: 0.5; filter: drop-shadow(0 0 2px currentColor); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+button, select, input {
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
